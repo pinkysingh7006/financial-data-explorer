@@ -1,7 +1,10 @@
 import { generateSummary } from "../../utils/summary";
 import "./summary.css";
+type Props = {
+    data: { year: string; value: number }[];
+};
 
-function Summary({ data }) {
+function Summary({ data }: Props) {
     if (!data?.length) return null;
 
     return (

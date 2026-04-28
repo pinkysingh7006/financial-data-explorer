@@ -1,7 +1,7 @@
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
 
-function FinancialChart({ data }) {
+function FinancialChart({ data }: any) {
     if (!data || data.length === 0) return null;
 
     const chartData = {
