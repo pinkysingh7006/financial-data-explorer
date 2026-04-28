@@ -59,20 +59,19 @@ export default function SearchBar() {
                 `https://data.sec.gov/api/xbrl/companyfacts/CIK${cik}.json`,
             );
             const usGaap = res.data?.facts?.["us-gaap"];
-            const assets = convertToChart(formatData(usGaap?.Assets?.units?.USD));
-            const liabilities = convertToChart(
+            const assets: any = convertToChart(formatData(usGaap?.Assets?.units?.USD));
+            const liabilities: any = convertToChart(
                 formatData(
                     usGaap?.Liabilities?.units?.USD ||
                     usGaap?.LiabilitiesCurrent?.units?.USD,
                 ),
             );
 
-            const revenue = convertToChart(
+            const revenue: any = convertToChart(
                 formatData(
                     usGaap?.Revenues?.units?.USD || usGaap?.SalesRevenueNet?.units?.USD,
                 ),
             );
-
             setFinancials({ assets, liabilities, revenue });
         } catch (error) {
             console.error(error);

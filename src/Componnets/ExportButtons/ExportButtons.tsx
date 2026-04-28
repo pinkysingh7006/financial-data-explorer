@@ -1,6 +1,8 @@
 import { downloadCSV } from "../../utils/csv";
-
-function ExportButtons({ data }) {
+type Props = {
+    data: { year: string; value: number }[];
+};
+function ExportButtons({ data }: Props) {
     return (
         <div className="export-box">
             <button onClick={() => downloadCSV(data)}>
