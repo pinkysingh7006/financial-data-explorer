@@ -23,7 +23,7 @@ CSS (custom styling)
 
 ## Installation
 
-git clone <https://github.com/pinkysingh7006/Assignment-project/tree/feature/search-bar/tech-assignment>
+git clone <https://github.com/pinkysingh7006/financial-data-explorer>
 cd project-folder
 npm install
 npm run dev
